@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        hutan: 'url("/public/image/forest.png")',
-        kucing: 'url("/public/image/kucing.jpeg")',
+        kucing: 'url("../public/image/kucing.jpeg")',
+        hutan: 'url("../public/image/forest.png")',
       },
     },
   },
