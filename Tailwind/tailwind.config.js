@@ -7,6 +7,9 @@ module.exports = {
         kucing: 'url("../public/image/kucing.jpeg")',
         hutan: 'url("../public/image/forest.png")',
         pantai: 'url("../public/image/pantai.jpeg")',
+        art: 'url("../public/image/art.jpg")',
+        vlue: 'url("../public/image/127.jpg")',
+
       },
     },
   },

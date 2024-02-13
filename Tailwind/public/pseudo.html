@@ -6,13 +6,69 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="w-[1200px] h-[700px] bg-slate-500 mx-auto mt-10">
-      <div class="w-[640px] h-[725px] bg-slate-1 mx-auto rounded-[110px] flex justify-center">
-        <div>
-          <h1 class="mt-28 text-[35px] font-semibold text-center">Welcome</h1>
+  <body class="bg-sky-500">
+    <!-- kiri -->
+    <div
+      class="w-[1200px] h-[700px] bg-slate-500 mx-auto mt-10 flex justify-normal"
+    >
+      <div
+        class="w-[450px] h-[725px] bg-slate-1 flex justify-center bg-gray-100"
+      >
+        <div class="mt-20">
+          <h1 class="mt-28 text-[35px] font-light text-center">
+            Welcome
+            <div class="text-sm">
+              Selamat datang,silahkan login terlebih dahulu
+            </div>
+          </h1>
+          <label class="block mt-14 justify-center">
+            <span class="block text-[16px] font-medium text-slate-700"
+              >Email</span
+            >
+            <input
+              type="email"
+              class="peer px-4 w-[300px] h-[40px] border-2 border-slate-600 mx-auto mt-2 rounded-lg"
+            />
+            <p class="mt-2 invisible peer-invalid:visible text-red-500 text-sm">
+              Please provide a valid email address.
+            </p>
+          </label>
+          <label class="block justify-center">
+            <span class="block text-[16px] font-medium text-slate-700"
+              >Password</span
+            >
+            <input
+              type="password"
+              class="peer px-4 w-[300px] h-[40px] border-2 border-slate-600 mx-auto mt-2 rounded-lg"
+            />
+            <p class="mt-2 invisible peer-invalid:visible text-red-500 text-sm">
+              Please provide a valid email address.
+            </p>
+          </label>
+          <label for="">
+            <span class="block text-[16px] font-medium text-slate-700">ID</span>
+            <input
+              type="text"
+              disabled
+              type="email"
+              id="email"
+              class="peer px-4 w-[300px] h-[40px] border-2 border-slate-600 mx-auto mt-1 rounded-lg"
+            />
+          </label>
+          <div class="space-x-14 mt-10">
+            <button
+              class="w-[100px] h-10 bg-blue-500 mt-[2px] rounded-lg text-white font-medium hover:bg-blue-900"
+            >
+              Login
+            </button>
+            <button class=" font-semibold text-blue-500 hover:text-blue-900">Forget Password?</button>
+          </div>
         </div>
       </div>
+      <!-- kanan -->
+      <div
+        class="w-[750px] h-[725px] bg-slate-1 flex justify-center bg-amber-200 bg-art bg-cover"
+      ></div>
     </div>
   </body>
 </html>
