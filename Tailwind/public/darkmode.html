@@ -1,24 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="stylesheet" href="style.css" />
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
-    <!-- Include Tailwind CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
   </head>
-
-  <body class="bg-cyan-400 flex items-center justify-center h-screen  dark:bg-slate-800 dark:text-white">
-    
-    <div class="max-w-md w-full p-6 bg-white rounded-md shadow-md md:max-w-sm">
-      <h2 class="text-xl md:text-2xl font-semibold text-center mb-6 dark:text-blue-500">Login</h2>
-       <!-- <div class="h-20 w-20"></div> -->
+  <body class="bg-white dark:bg-black dark:text-white">
+    <!-- <div class="h-20 w-20"></div> -->
     <div></div>
     <div class="flex items-center justify-center gap-1">
       <!-- svg matahari, ambil code nya di hero-icon -->
@@ -28,7 +17,7 @@
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class=" dark:text-yellow-500 h-6 w-6"
+        class="h-6 w-6"
       >
         <path
           stroke-linecap="round"
@@ -36,7 +25,7 @@
           d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
         />
       </svg>
-      <button class="h-5 w-10 rounded-full dark:bg-blue-500 bg-slate-500 p-0.5">
+      <button class="h-5 w-10 rounded-full bg-slate-500 p-0.5">
         <div class="h-4 w-4 rounded-full bg-white dark:translate-x-5"></div>
       </button>
       <!-- svg bulan, ambil code nya di hero-icon -->
@@ -46,7 +35,7 @@
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="dark:text-blue-500 h-6 w-6"
+        class="dark:white h-6 w-6"
       >
         <path
           stroke-linecap="round"
@@ -70,39 +59,5 @@
         document.documentElement.classList.add("dark");
       }
     </script>
-      <form action="#" method="POST">
-        <div class="mb-4">
-          <label for="username" class="block text-gray-700 font-semibold mb-2"
-            >Username</label
-          >
-          <input
-            type="text"
-            id="username"
-            name="username"
-            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-          />
-        </div>
-        <div class="mb-6">
-          <label for="password" class="block text-gray-700 font-semibold mb-2"
-            >Password</label
-          >
-          <input
-            type="password"
-            id="password"
-            name="password"
-            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-          />
-        </div>
-        <div class="flex items-center justify-between">
-          <button
-            type="submit"
-            class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
-          >
-            Login
-          </button>
-          <a href="#" class="text-blue-500 hover:underline">Forgot Password?</a>
-        </div>
-      </form>
-    </div>
   </body>
 </html>
