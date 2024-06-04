@@ -44,24 +44,112 @@
           </form>
         </div>
         <!-- harga -->
-        <h1 class="mt-20 ml-16 font-semibold">Rp500.000</h1>
+        <h1 class="mt-20 ml-16 font-semibold"><span id="asli">500000</span></h1>
         <!-- button tambah dan kurang -->
         <div class="border-2 h-7 mt-20 border-black ml-10 rounded-sm">
-          <button class="ml-1">+</button>
-          <input type="number" name="jumlah" id="barang" class="w-11 h-4" />
-          <button class="mr-2">-</button>
+          <button onclick="kurang()" class="ml-1">-</button>
+          <input
+            type="number "
+            name="jumlah"
+            id="barang"
+            class="w-11 h-4 text-center"
+            value="1"
+          />
+          <button onclick="tambah()" id="kurang" class="mr-2">+</button>
         </div>
         <!-- harga 2 -->
-        <h1 class="mt-20 ml-16 font-semibold text-orange-400">Rp500.000</h1>
+        <h1 id="hasil" class="mt-20 ml-16 font-semibold text-orange-400"></h1>
         <div class="">
-          <h1 class="mt-[70px] ml-[99px]">Hapus</h1>
-          <h1 class="ml-16 text-orange-400">Produk Serupa</h1>
+          <h1 class="mt-[70px] ml-[50px] font-bold text-xl">Kuantitas</h1>
+          <h1 class="ml-16">Hapus</h1>
         </div>
       </div>
     </div>
+    <div
+      class="bg-white w-[1300px] h-[90px] mt-4 mx-auto border border-slate-400"
+    >
+      <p class="text-center mt-7">
+        Gratis Ongkir s/d Rp15.000 dengan min. belanja Rp0;Gratis Ongkir s/d
+        Rp40.000 dengan min. belanja Rp150.000
+        <span class="text-blue-700">Pelajari lebih lanjut</span>
+      </p>
+    </div>
+    <!-- voucher -->
+    <div
+      class="bg-white w-[1300px] h-[60px] mx-auto mt-1 flex space-x-4 pt-3 pl-4"
+    >
+      <p class="mt-1">Voucher Discount :</p>
+      <input
+        type="text"
+        id="voucher"
+        class="w-64 h-8 border border-black rounded pl-2"
+        placeholder="Masukkan voucher"
+      />
+      <button
+        class="bg-blue-500 h-8 text-white rounded-md w-32"
+        onclick="Voucher()"
+      >
+        Cek voucher
+      </button>
+      <p id="hasilvoucher" class="mt-1"></p>
+    </div>
+    <div
+      class="bg-white w-[1300px] h-[90px] mt-4 mx-auto border border-slate-400"
+    >
+      <p>Total:</p>
+      <button
+        class="w-[155px] h-14 bg-orange-500 ml-28 rounded-md hover:bg-orange-600"
+      >
+        <p class="text-center text-white">Checkout</p>
+      </button>
+    </div>
     <!-- javascript -->
     <script>
-      
+      var sepatu = document.getElementById("asli").innerHTML;
+      console.log(sepatu);
+      document.getElementById("hasil").innerHTML = sepatu;
+
+      function tambah() {
+        var barang = document.getElementById("barang").value;
+        barang++;
+        console.log(barang);
+        document.getElementById("barang").value = barang;
+        var hasil = barang * sepatu;
+        document.getElementById("hasil").innerHTML = hasil;
+      }
+      function kurang() {
+        var barang = document.getElementById("barang").value;
+        barang--;
+        document.getElementById("barang").value = barang;
+        console.log(barang);
+        document.getElementById("barang").value = barang;
+        var hasil = barang * sepatu;
+        document.getElementById("hasil").innerHTML = hasil;
+      }
+      function Voucher() {
+        var inpuVoucher = document.getElementById("voucher").value;
+        if (inpuVoucher == "Discount 50%") {
+          document.getElementById("hasilvoucher").innerHTML =
+            "Vocher Berhasil!";
+          document
+            .getElementById("hasilvoucher")
+            .classList.add("text-green-500", "font-bold");
+        } else if (inpuVoucher == "Discount 30%") {
+          document.getElementById("hasilvoucher").innerHTML =
+            "Vocher Berhasil!";
+          document
+            .getElementById("hasilvoucher")
+            .classList.add("text-green-500", "font-bold");
+        } else {
+          document.getElementById("hasilvoucher").innerHTML = "Coba Lagi";
+          document
+            .getElementById("hasilvoucher")
+            .classList.remove("text-green-500", "font-bold");
+          document
+            .getElementById("hasilvoucher")
+            .classList.add("text-red-500", "font-bold");
+        }
+      }
     </script>
   </body>
 </html>
